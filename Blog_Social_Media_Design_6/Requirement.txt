@@ -1,0 +1,11 @@
+Requirements:-
+----------------
+1. A User can have multiple phone numbers.
+2. A User should be able to post.
+3. A post can have multiple images.
+4. A post may or may not belong to a category.
+5. The post should be editable.
+6. A user can comment, like, dislike and share a post.
+7. A user can give multiple replies to a comment (i.e., Comment can be nested).
+8. A user can like or dislike a comment.
+9. A user can edit his/her comment.
