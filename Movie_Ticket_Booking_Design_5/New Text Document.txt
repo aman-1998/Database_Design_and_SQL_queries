@@ -1,0 +1,18 @@
+Requirements:-
+
+I. Functional Requirements:
+------------------------------
+1. Our ticket booking service should be able to list different cities where its affiliate cinemas are located.
+2. Once the user selects the city, the service should display the movies released in that particular city.
+3. Once the user selects a movie, the service should display the cinemas running that movie and its available showtimes.
+4. The user should be able to choose a show at a particular cinema and book their tickets.
+5. The service should be able to show the user the seating arrangement of the cinema hall. The user should be able to select multiple seats according to their preference.
+6. The user should be able to distinguish available seats from booked ones.
+7. Users should be able to put a hold on the seats for five minutes before they make a payment to finalize the booking.
+8. The user should be able to wait if there is a chance that the seats might become available, e.g., when holds by other users expire.
+9. Waiting customers should be serviced in a fair, first come, first serve manner.
+
+II. Non-Functional Requirements:
+----------------------------------
+1. The system would need to be highly concurrent. There will be multiple booking requests for the same seat at any particular point in time. The service should handle this gracefully and fairly.
+2. The core thing of the service is ticket booking, which means financial transactions. This means that the system should be secure and the database ACID compliant.

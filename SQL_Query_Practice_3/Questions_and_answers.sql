@@ -105,6 +105,3 @@ SELECT
 FROM
     students_attended_schools_on_birthday sasob,
     total_students ts
-	
---------------------------------------------------------------------------------------------------
-/* 3.  */
