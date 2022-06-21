@@ -3,7 +3,10 @@ This effort of mine is a compilation of the SQL query and Database Design questi
 
 Link to download <b>Dia</b> : https://sourceforge.net/projects/dia-installer/files/dia-win32-installer/0.97.2/dia-setup-0.97.2-2-unsigned.exe/download 
 
-Some important links:
+<hr>
+
+### Some important links:
+
 1. https://www.oracletutorial.com/oracle-date-functions/oracle-to_char/#:~:text=The%20Oracle%20TO_CHAR()%20function,in%20a%20specific%20date%20format <br>
 
 2. https://www.toolbox.com/tech/oracle/question/oracle-sql-convert-format-of-a-date-to-dd-mm-yyyy-092514/#:~:text=For%20a%20simple%20test%2C%20try,table%20name%20for%20that%20column <br>
