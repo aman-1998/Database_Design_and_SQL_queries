@@ -1,0 +1,57 @@
+The first step towards building a data model is to identify important actors/ entities involved in the process. In our case, if we think about our interaction with taxi apps, we can identify important entities involved. The user (i.e. Rider) is one such entity, so is the Driver/ Partner. Once we open the app, we try to book a trip by finding a suitable taxi/ cab from a particular location to another. After the trip gets finished, the app collects the payment and we are done. Ideally, the flow continues to reviews/ ratings, helpcenter in case of issues etc. but for this post we will only consider scenarios till the ride gets finished. So, to summarize, we have the following key entities;
+
+Entities:-
+------------
+Rider
+Driver
+Cab
+Trip
+Location
+Payment
+
+Attributes:-
+--------------
+Once we have some sense of the important entities in any scenario, the next step is figure out important attributes for each of these entities. 
+
+Description:-
+---------------
+
+Rider
+------
+A record in this table should be about the details for the rider. Apart for the usual demographic attributes, I have added the current payment attributes for any rider. There can be a case for SCD type implementation for these attributes where we have a new record for the rider everytime he changes his payment preferences (while marking the existing record as inactive).
+
+Driver
+-------
+Similar to the rider details, we have a table for Drivers which stores demographic attributes. Also, a driver can be driving different vehicles at different points of time. To support that use case, I have a current cab details tagged to the driver record. Again, a case can be made for tracking history of cabs being used by a driver.
+
+Cab
+----
+This table stores details about vehicles onboarded to the platform. As the per km rate of the ride gets defined by the vehicle type, there is an attribute capturing the base_rate.
+
+Rider_Bookmarks
+----------------
+A rider might want to save some strategic locations to avoid searching on the map (e.g. home, office etc.). This table will store those locations.
+
+Map_Grid
+---------
+In order to tag each location on the map to query-able records, we can imagine the map to be a grid (e.g. grids of 1km x 1km). This allows us to query maps data with other tables in our relational schema.
+
+Location
+---------
+This table will store locations in the "human readable" form. It has provisions to tag some landmarks (e.g. airports, malls, housing society etc.). It can also serve to identify related/ same locations (e.g. front gate and back gate of a railway station) via the related_location_id field.
+
+Trip
+-----
+This table stores details about every trip. It has different timestamp fields which will be of interest while finding durations related to the trip. It also has joins to different tables above for the join queries. 
+
+Payment
+--------
+To store information about transaction.
+
+Payment_Method
+---------------
+To store different payment methods like UPI, Cash, Card, etc.
+
+Payment_Detail
+---------------
+To store information about payments.
