@@ -26,3 +26,22 @@ GROUP BY
     uwnotoiad.user_id
 HAVING 
     COUNT(*) = 7
+	
+-- or,
+
+WITH day_details AS (
+    SELECT DISTINCT
+        li.user_id,
+        to_char(li.login_time, 'DAY') AS day
+    FROM
+        login_info li
+)
+SELECT
+    user_id,
+    COUNT(*) AS no_of_days_active
+FROM
+    day_details
+GROUP BY
+    user_id
+HAVING
+    COUNT(*) = 7
