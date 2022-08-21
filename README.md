@@ -17,4 +17,6 @@ Link to download <b>Dia</b> : https://sourceforge.net/projects/dia-installer/fil
 
 5. https://stackoverflow.com/questions/37559741/convert-timestamp-to-date-in-oracle-sql <br>
 
-6. https://vertabelo.com/blog/organize-your-time-and-resources-a-project-management-data-model/
+6. https://vertabelo.com/blog/organize-your-time-and-resources-a-project-management-data-model/ <br>
+
+7. https://docs.oracle.com/cd/B19306_01/server.102/b14225/ch4datetime.htm#i1006050
